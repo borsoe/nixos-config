@@ -65,7 +65,7 @@
               # host specific config
               { config.networking.hostName = host; }
               (./hosts + "/${host}")
-              (inputs.secrets.hostSecrets.${host})
+              # (inputs.secrets.hostSecrets.${host})
 
               # my modules
               ./modules/system
