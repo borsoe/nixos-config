@@ -33,6 +33,7 @@
 
       # wm
       hyprland.enable = false;
+      caelestial.enable = true;
 
       # style
       stylix.enable = true;

@@ -26,7 +26,6 @@
       # wm
       hyprland.enable = false;
       niri.enable = true;
-      caelestial.enable = true;
 
       # security
       security = {

@@ -7,11 +7,11 @@
 }:
 
 let
-  cfg = config.systemSettings.caelestial;
+  cfg = config.userSettings.caelestial;
 in
 {
   options ={
-    systemSettings.caelestial = {
+    userSettings.caelestial = {
       enable = lib.mkEnableOption "Enable caelestial";
     };
   };
