@@ -11,7 +11,7 @@
     services.journald.rateLimitInterval = "30s";
 
     # Locale and TZ
-    time.timeZone = "America/Chicago";
+    time.timeZone = "Asia/Tehran";
     services.timesyncd.enable = true;
     i18n.defaultLocale = "en_US.UTF-8";
     i18n.extraLocaleSettings = {
