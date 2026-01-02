@@ -1,5 +1,5 @@
 {
-  description = "Flake of LibrePhoenix";
+  description = "Flake of borsoe's system";
 
   outputs =
     inputs@{ self, ... }:
@@ -28,8 +28,8 @@
           allowUnfreePredicate = (_: true);
         };
         overlays = [
-          inputs.rust-overlay.overlays.default
-          inputs.emacs-overlay.overlays.default
+          # inputs.rust-overlay.overlays.default
+          # inputs.emacs-overlay.overlays.default
           inputs.chaotic.overlays.default
         ];
       };
@@ -118,21 +118,19 @@
 
     stylix.url = "github:nix-community/stylix";
 
-    emacs-overlay = {
-      url = "github:nix-community/emacs-overlay";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    rust-overlay.url = "github:oxalica/rust-overlay";
+    # blocklist-hosts = {
+    #   url = "github:StevenBlack/hosts";
+    #   flake = false;
+    # };
 
-    blocklist-hosts = {
-      url = "github:StevenBlack/hosts";
-      flake = false;
-    };
-
-    secrets = {
-      url = "git+file:///etc/nixos.secrets";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # secrets = {
+    #   url = "git+file:///etc/nixos.secrets";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 }
