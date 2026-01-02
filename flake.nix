@@ -73,6 +73,8 @@
               # home manager
               inputs.home-manager.nixosModules.home-manager
               {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
                 home-manager.extraSpecialArgs = {
                   inherit pkgs;
                   inherit pkgs-stable;
@@ -130,15 +132,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # quickshell = {
+    #   url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # blocklist-hosts = {
-    #   url = "github:StevenBlack/hosts";
-    #   flake = false;
-    # };
+    blocklist-hosts = {
+      url = "github:StevenBlack/hosts";
+      flake = false;
+    };
 
     # secrets = {
     #   url = "git+file:///etc/nixos.secrets";

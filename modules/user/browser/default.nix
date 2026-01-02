@@ -20,7 +20,7 @@ in {
     userSettings.brave.enable = lib.mkIf (browser == "brave") true;
     userSettings.librewolf.enable = lib.mkIf (browser == "librewolf") true;
     userSettings.qutebrowser.enable = lib.mkIf (browser == "qutebrowser") true;
-    userSettings.zen.enable = lib.mkIf (browser == "zen") true
+    userSettings.zen.enable = lib.mkIf (browser == "zen") true;
 
     userSettings.spawnBrowser = lib.mkMerge [
       (lib.mkIf (browser == "brave") "sh -c 'brave --new-window'")

@@ -33,8 +33,8 @@ in
     programs.git.extraConfig = {
       init.defaultBranch = "main";
       safe.directory = [
-        osConfig.systemSettings.dotfilesDir
-        osConfig.systemSettings.secretsFlakeDir
+        # osConfig.systemSettings.dotfilesDir
+        # osConfig.systemSettings.secretsFlakeDir
         (config.home.homeDirectory + "/.cache/nix/tarball-cache")
       ];
     };
