@@ -101,6 +101,22 @@
         "type": "github"
       }
     },
+    "blocklist-hosts": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767305878,
+        "narHash": "sha256-BsNIVz4c37xY3GTo4XqOR+tS+eBtr0yKFTtTTVqUa6Q=",
+        "owner": "StevenBlack",
+        "repo": "hosts",
+        "rev": "24968b6f91279255f204eda2526d212af0b31fb4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "StevenBlack",
+        "repo": "hosts",
+        "type": "github"
+      }
+    },
     "caelestia-cli": {
       "inputs": {
         "caelestia-shell": [
@@ -1163,6 +1179,7 @@
     },
     "root": {
       "inputs": {
+        "blocklist-hosts": "blocklist-hosts",
         "caelestia-shell": "caelestia-shell",
         "chaotic": "chaotic",
         "home-manager": "home-manager_2",
