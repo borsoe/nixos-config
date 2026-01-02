@@ -2,6 +2,7 @@
   input,
   pkgs,
   config,
+  lib,
   ...
 }:
 
@@ -11,9 +12,10 @@ in
 {
   options ={
     systemSettings.caelestial = {
-      enable = lib.mkEnableOption "Enable caelestial-shell";
+      enable = lib.mkEnableOption "Enable caelestial";
     };
   };
+
   config = lib.mkIf cfg.enable {
     programs.caelestia = {
       enable = true;
