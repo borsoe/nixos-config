@@ -3,7 +3,7 @@
 {
   config = {
     # Packages
-    environment.systemPackages = with pkgs; [ git ];
+    environment.systemPackages = with pkgs; [ git nh ];
 
     # Journal
     services.journald.extraConfig = "SystemMaxUse=50M\nSystemMaxFiles=5";

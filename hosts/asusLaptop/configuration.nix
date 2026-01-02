@@ -11,7 +11,7 @@
       cachy.enable = true;
       bluetooth.enable = true;
       powerprofiles.enable = true;
-      tlp.enable = false;
+      tlp.enable = true;
       printing.enable = false;
 
       # software
