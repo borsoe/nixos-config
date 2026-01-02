@@ -30,4 +30,5 @@ in
       gamescope
       xwayland-satellite-unstable
     ];
-  }
+  };
+};
