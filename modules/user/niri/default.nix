@@ -19,7 +19,7 @@ in
   options = {
     userSettings.niri = {
       enable = lib.mkEnableOption "Enable niri user configuration";
-      config = lib.mkOption {
+      configVariant = lib.mkOption {
         default = "default";
         type = lib.types.enum ["default" "minimal" "gaming" "productivity"]; # add new config options here
         description = "Niri configuration files";
