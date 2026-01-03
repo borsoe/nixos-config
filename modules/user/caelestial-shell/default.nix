@@ -1,8 +1,6 @@
 {
   config,
   lib,
-  pkgs,
-  inputs,
   ...
 }:
 
@@ -10,7 +8,7 @@ let
   cfg = config.userSettings.caelestial;
 in
 {
-  options ={
+  options = {
     userSettings.caelestial = {
       enable = lib.mkEnableOption "Enable caelestial";
     };
@@ -26,7 +24,7 @@ in
       systemd = {
         enable = false; # if you prefer starting from your compositor
         target = "graphical-session.target";
-        environment = [];
+        environment = [ ];
       };
 
       settings = {
