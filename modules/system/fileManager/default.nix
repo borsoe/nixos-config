@@ -1,12 +1,14 @@
 {
-  inputs,
   pkgs,
+  config,
+  lib,
   ...
 }:
 
 let
   cfg = config.systemSettings.thunar; # TODO, add support for other file managers
-in {
+in
+{
 
   options = {
     systemSettings.thunar = {
@@ -16,17 +18,16 @@ in {
 
   config = lib.mkIf cfg.enable {
     programs = {
-        thunar = {
-          enable = true;
-          plugins = with pkgs.xfce; [
-            thunar-archive-plugin
-            thunar-volman
-          ];
-        };
+      thunar = {
+        enable = true;
+        plugins = with pkgs.xfce; [
+          thunar-archive-plugin
+          thunar-volman
+        ];
       };
-      environment.systemPackages = with pkgs; [
-        ffmpegthumbnailer # Need For Video / Image Preview
-      ];
     };
+    environment.systemPackages = with pkgs; [
+      ffmpegthumbnailer # Need For Video / Image Preview
+    ];
   };
 }

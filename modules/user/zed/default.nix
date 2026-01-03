@@ -22,7 +22,7 @@ in
     stylix.targets.zed.enable = true;
     programs.zed-editor.enable = true;
     programs.zed-editor.userSettings = {
-      cursor_blink = false;
+      cursor_blink = true;
       session = {
         restore_unsaved_buffers = false;
       };
@@ -67,7 +67,7 @@ in
         model_parameters = [ ];
       };
       git_panel = {
-        button = false;
+        button = true;
       };
       project_panel = {
         starts_open = false;
@@ -83,7 +83,7 @@ in
         show_branch_icon = true;
       };
       preview_tabs = {
-        enable_preview_from_file_finder = false;
+        enable_preview_from_file_finder = true;
       };
       tabs = {
         file_icons = true;
@@ -94,129 +94,15 @@ in
       prettier = {
         allowed = false;
       };
-      vim_mode = true;
-      base_keymap = "Emacs";
+      vim_mode = false;
+      base_keymap = "JetBrains";
       icon_theme = "Zed (Default)";
       buffer_font_family = "FiraCode Nerd Font";
       buffer_font_size = 24.0;
       ui_font_family = "Fira Sans";
       ui_font_size = 16.0;
     };
-    programs.zed-editor.userKeymaps = [
-      {
-        context = "";
-        bindings = {
-          "alt-x" = "command_palette::Toggle";
-          "alt-z" = "terminal_panel::Toggle";
-          "alt-d" = "debug_panel::ToggleFocus";
-        };
-      }
-      {
-        context = "VimControl || (!Editor && !menu && !Terminal)";
-        bindings = {
-          "ctrl-x ctrl-s" = "workspace::Save";
-          "ctrl-x ctrl-shift-s" = "workspace::SaveAll";
-          "space w v" = "pane::SplitVertical";
-          "space w V" = "pane::SplitVertical";
-          "space w h" = "pane::SplitHorizontal";
-          "space w H" = "pane::SplitHorizontal";
-          "space p f" = "file_finder::Toggle";
-          "space p p" = "projects::OpenRecent";
-          "space g g" = [
-            "task::Spawn"
-            {
-              "task_name" = "gitu";
-            }
-          ];
-          "space g G" = [
-            "task::Spawn"
-            {
-              "task_name" = "magit";
-            }
-          ];
-          "space o d" = [
-            "task::Spawn"
-            {
-              "task_name" = "yazi";
-            }
-          ];
-          "ctrl-h" = "workspace::ActivatePaneLeft";
-          "ctrl-l" = "workspace::ActivatePaneRight";
-          "ctrl-j" = "workspace::ActivatePaneDown";
-          "ctrl-k" = "workspace::ActivatePaneUp";
-          "ctrl-w" = "pane::CloseActiveItem";
-          "space w d" = "pane::CloseAllItems";
-          "space b d" = "pane::CloseActiveItem";
-          "space b p" = "panel::PreviousPanelTab";
-          "space b n" = "panel::NextPanelTab";
-          "space b i" = "tab_switcher::ToggleAll";
-          "ctrl-i" = "tab_switcher::ToggleAll";
-          "alt-z" = "terminal_panel::Toggle";
-          "alt-d" = "debug_panel::ToggleFocus";
-        };
-      }
-      {
-        context = "OutlinePanel";
-        bindings = {
-          "ctrl-h" = "workspace::ActivatePaneLeft";
-          "ctrl-l" = "workspace::ActivatePaneRight";
-          "ctrl-j" = "workspace::ActivatePaneDown";
-          "ctrl-k" = "workspace::ActivatePaneUp";
-        };
-      }
-      {
-        context = "OutlinePanel && not_editing";
-        bindings = {
-          "q" = "workspace::ToggleLeftDock";
-        };
-      }
-      {
-        context = "ProjectPanel";
-        bindings = {
-          "ctrl-h" = "workspace::ActivatePaneLeft";
-          "ctrl-l" = "workspace::ActivatePaneRight";
-          "ctrl-j" = "workspace::ActivatePaneDown";
-          "ctrl-k" = "workspace::ActivatePaneUp";
-        };
-      }
-      {
-        context = "ProjectPanel && not_editing";
-        bindings = {
-          "tab" = "project_panel::OpenPermanent";
-          "q" = "workspace::ToggleLeftDock";
-          "r" = "project_panel::Rename";
-          "D" = "project_panel::Delete";
-        };
-      }
-      {
-        context = "Terminal";
-        bindings = {
-          "ctrl-space w d" = "pane::CloseAllItems";
-          "ctrl-space b d" = "pane::CloseActiveItem";
-          "ctrl-space b p" = "panel::PreviousPanelTab";
-          "ctrl-space b n" = "panel::NextPanelTab";
-          "ctrl-space b i" = "tab_switcher::ToggleAll";
-          "ctrl-w" = "pane::CloseActiveItem";
-          "alt-z" = "terminal_panel::Toggle";
-          "alt-d" = "debug_panel::ToggleFocus";
-          "ctrl-i" = "tab_switcher::ToggleAll";
-          "alt-p" = [
-            "tab_switcher::Toggle"
-            { "select_last" = true; }
-          ];
-          "ctrl-p" = null;
-          "ctrl-n" = null;
-        };
-      }
-      {
-        "context" = "Editor && vim_mode == insert";
-        "bindings" = {
-          "ctrl-w" = "pane::CloseActiveItem";
-          "alt-z" = "terminal_panel::Toggle";
-          "alt-d" = "debug_panel::ToggleFocus";
-        };
-      }
-    ];
+
     programs.zed-editor.userTasks = [
       {
         label = "gitu";
@@ -268,6 +154,7 @@ in
       "fortran"
       "ruby"
       "org"
+      "kdl"
     ];
   };
 }
