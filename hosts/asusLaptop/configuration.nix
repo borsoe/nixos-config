@@ -27,6 +27,9 @@
       hyprland.enable = false;
       niri.enable = true;
 
+      # file manager
+      thunar.enable = true;
+
       # security
       security = {
         automount.enable = true;

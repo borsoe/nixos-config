@@ -28,12 +28,20 @@ in
         target = "graphical-session.target";
         environment = [];
       };
+      general ={
+        apps = {
+          terminal = "kitty";
+        }
+      }
       settings = {
         bar.status = {
           showBattery = false;
         };
         paths.wallpaperDir = "~/Images";
       };
+      services ={
+        weatherLocation = "Tehran";
+      }
       cli = {
         enable = true; # Also add caelestia-cli to path
         settings = {
