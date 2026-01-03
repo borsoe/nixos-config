@@ -12,7 +12,7 @@ in
 {
   options = {
     systemSettings.niri = {
-      enable = lib.mkEnableOption "Enable hyprland";
+      enable = lib.mkEnableOption "Enable niri";
     };
   };
 
@@ -29,5 +29,7 @@ in
       gamescope
       xwayland-satellite-unstable
     ];
+    services.displayManager.sddm.enable = true;
+    services.displayManager.sddm.wayland.enable = true;
   };
 }
