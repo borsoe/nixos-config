@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, inputs,... }:
 
 with lib;
 let
@@ -23,7 +23,7 @@ let
 
 in
 {
-
-  imports = importAll ./.;
-
+  imports = [
+    inputs.caelestia-shell.homeManagerModules.default
+  ] ++ (importAll ./.);
 }
