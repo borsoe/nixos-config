@@ -33,7 +33,7 @@
 
       # wm
       hyprland.enable = false;
-      niri.enable = false;
+      niri.enable = true;
       niri.configVariant = "default";
       caelestial.enable = true;
 
