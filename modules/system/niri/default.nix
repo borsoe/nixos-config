@@ -46,14 +46,14 @@ in
     services.xserver.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      enableHidpi = true;
-      theme = "sddm-astronaut-theme";
-      package = pkgs.kdePackages.sddm;
-      extraPackages = with pkgs; [
-        (sddm-astronaut.override {
-          embeddedTheme = "Japanese aesthetic";
-        })
-      ];
+      #  enableHidpi = true;
+      # theme = "sddm-astronaut-theme";
+      #package = pkgs.kdePackages.sddm;
+      #extraPackages = with pkgs; [
+      # (sddm-astronaut.override {
+      #   embeddedTheme = "Japanese aesthetic";
+      #})
+      #];
     };
   };
 }
