@@ -11,6 +11,9 @@
       };
       xdg.enable = true;
 
+      # terminal
+      terminal = "kitty";
+
       # programs
       browser = "zen";
       editor = "zed";

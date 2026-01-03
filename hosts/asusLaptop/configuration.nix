@@ -42,7 +42,7 @@
       # style
       stylix = {
         enable = true;
-        theme = "orichalcum";
+        theme = "catppuccin-frappe";
       };
     };
 

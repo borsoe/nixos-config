@@ -17,7 +17,8 @@ in
   };
 
   # for whatever reason, I can't import stylix hmModule if the nixosModule is imported
-  imports = lib.optionals (!osConfig.stylix.enable) [ inputs.stylix.homeManagerModules.stylix ];
+  # imports = lib.optionals (!osConfig.stylix.enable) [ inputs.stylix.homeManagerModules.stylix ];
+  # borsoe: pretty sure that system module itself does import the home manager module, see https://www.youtube.com/watch?v=ljHkWgBaQWU&t=80s
 
   config = lib.mkIf cfg.enable {
     stylix.enable = true;
