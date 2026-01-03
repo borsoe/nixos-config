@@ -31,14 +31,14 @@ in
       gamescope
       xwayland-satellite-unstable
       (sddm-astronaut.override {
-        themeConfig = {
+        # themeConfig = {
           # TODO Update Theme Config
           # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
-          background = config.stylix.image;
-          ScreenWidth = 1920;
-          ScreenHeight = 1080;
-          blur = false;
-        };
+          # background = config.stylix.image;
+          # ScreenWidth = 1920;
+          # ScreenHeight = 1080;
+          # blur = false;
+        # };
       })
     ];
 
