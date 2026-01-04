@@ -31,6 +31,7 @@ in
       gamescope
       xwayland-satellite-unstable
       (sddm-astronaut.override {
+        embeddedTheme = "Japanese aesthetic";
         # themeConfig = {
           # TODO Update Theme Config
           # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
