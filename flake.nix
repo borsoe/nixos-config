@@ -103,14 +103,25 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland = {
-      url = "github:hyprwm/Hyprland/v0.52.2?submodules=true";
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprlock = {
-      url = "github:hyprwm/hyprlock/v0.9.2";
-      inputs.nixpkgs.follows = "nixpkgs";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
     };
+
+    hyprtasking = {
+      url = "github:raybbian/hyprtasking";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    rose-pine-hyprcursor = {
+          url = "github:ndom91/rose-pine-hyprcursor";
+          inputs.nixpkgs.follows = "nixpkgs";
+          inputs.hyprlang.follows = "hyprland/hyprlang";
+        };
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -118,7 +129,10 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    stylix.url = "github:nix-community/stylix";
+    stylix = {
+          url = "github:nix-community/stylix";
+          inputs.nixpkgs.follows = "nixpkgs";
+        };
 
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";

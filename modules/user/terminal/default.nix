@@ -3,7 +3,7 @@
 {
   options = {
     userSettings.terminal = lib.mkOption {
-      default = "alacritty";
+      default = "kitty";
       description = "Default terminal";
       type = lib.types.enum [ "alacritty" "kitty" ];
     };

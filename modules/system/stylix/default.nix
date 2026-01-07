@@ -20,7 +20,6 @@ in
 
   config = lib.mkIf cfg.enable {
     stylix.enable = true;
-    stylix.autoEnable = false;
     stylix.polarity = theme.polarity;
     stylix.image = pkgs.fetchurl {
      url = theme.backgroundUrl;

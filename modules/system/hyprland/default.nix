@@ -24,11 +24,11 @@ in
     programs = {
       hyprland = {
         enable = true;
-        package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+        package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
         xwayland = {
           enable = true;
         };
-        portalPackage = pkgs.xdg-desktop-portal-hyprland;
+        portalPackage  = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       };
     };
 
@@ -36,15 +36,17 @@ in
     environment.systemPackages = with pkgs; [
       jq
       (sddm-astronaut.override {
-        themeConfig = {
+        embeddedTheme = "Japanese aesthetic";
+        # themeConfig = {
           # TODO Update Theme Config
           # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
-          background = config.stylix.image;
-          ScreenWidth = 1920;
-          ScreenHeight = 1080;
-          blur = false;
-        };
+          # background = config.stylix.image;
+          # ScreenWidth = 1920;
+          # ScreenHeight = 1080;
+          # blur = false;
+        # };
       })
+      inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
 
     # Display manager
@@ -56,12 +58,15 @@ in
       package = pkgs.kdePackages.sddm;
       extraPackages = with pkgs; [
         (sddm-astronaut.override {
-          themeConfig = {
-            background = config.stylix.image;
-            ScreenWidth = 1920;
-            ScreenHeight = 1080;
-            blur = false;
-          };
+          embeddedTheme = "Japanese aesthetic";
+          # themeConfig = {
+            # TODO Update Theme Config
+            # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
+            # background = config.stylix.image;
+            # ScreenWidth = 1920;
+            # ScreenHeight = 1080;
+            # blur = false;
+          # };
         })
       ];
     };
@@ -135,11 +140,14 @@ in
     };
 
     # Auto rotate screen
-    programs.iio-hyprland = {
-      enable = true;
-      package = pkgs.iio-hyprland.overrideAttrs {
-        patches = [ ./iio-hyprland-hyprpaper.patch ];
-      };
-    };
+    #
+    # borsoe: why?
+    #
+    # programs.iio-hyprland = {
+    #   enable = true;
+    #   package = pkgs.iio-hyprland.overrideAttrs {
+    #     patches = [ ./iio-hyprland-hyprpaper.patch ];
+    #   };
+    # };
   };
 }
