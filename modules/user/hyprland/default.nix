@@ -97,8 +97,8 @@ in
       enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       plugins = [
-         inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
-         inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
+        inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
+        inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
       ];
       settings = {
         env = [
@@ -151,8 +151,8 @@ in
           hyprtasking = {
             layout = "linear";
             bg_color = "0xff${config.lib.stylix.colors.base02}";
-          }
-        }
+          };
+        };
 
         group = {
           "col.border_active" = config.wayland.windowManager.hyprland.settings.general."col.active_border";
@@ -194,12 +194,12 @@ in
 
         misc = {
           vfr = true;
-          vrr = 1
+          vrr = 1;
           animate_manual_resizes = false;
           animate_mouse_windowdragging = false;
           disable_hyprland_logo = true;
           mouse_move_enables_dpms = true;
-          force_default_wallpaper = 0
+          force_default_wallpaper = 0;
           enable_swallow = true;
           swallow_regex = "(scratch_term)|(Alacritty)|(kitty)";
           font_family = font;
