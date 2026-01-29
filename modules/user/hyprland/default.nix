@@ -131,6 +131,7 @@ in
           "mpris-proxy"
           "caelestia resizer -d"
           "caelestia shell -d"
+          "hyprctl dispatch submap global"
         ];
 
         general = {
