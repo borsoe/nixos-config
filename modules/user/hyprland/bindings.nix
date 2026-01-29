@@ -73,9 +73,6 @@ in
       "$kbLock" = "Super, L";
       "$kbRestoreLock" = "Super+Alt, L";
 
-      # Submaps
-      exec-once = "hyprctl dispatch submap global";
-
       # Caelestia Shell Launcher bindings
       bindi = [
         "Super, Super_L, global, caelestia:launcher"
