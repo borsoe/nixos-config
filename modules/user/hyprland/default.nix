@@ -102,7 +102,7 @@ in
       ];
       settings = {
         env = [
-          "AQ_DRM_DEVICES,${config.home.sessionVariables.AQ_DRM_DEVICES}"
+          # "AQ_DRM_DEVICES,${config.home.sessionVariables.AQ_DRM_DEVICES}"
           "AW_NO_MODIFIERS,1"
           "HYPRCURSOR_THEME,rose-pine-hyprcursor"
           "XDG_CURRENT_DESKTOP, Hyprland"
