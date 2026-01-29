@@ -35,9 +35,8 @@
       ai.enable = false;
 
       # wm
-      hyprland.enable = false;
-      niri.enable = true;
-      niri.configVariant = "default";
+      hyprland.enable = true;
+      niri.enable = false;
       caelestial.enable = true;
 
       # style

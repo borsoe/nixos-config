@@ -24,8 +24,8 @@
       brave.enable = false;
 
       # wm
-      hyprland.enable = false;
-      niri.enable = true;
+      hyprland.enable = true;
+      niri.enable = false;
 
       # file manager
       thunar.enable = true;
