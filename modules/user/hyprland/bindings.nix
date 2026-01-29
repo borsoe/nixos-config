@@ -15,16 +15,6 @@ let
   performance = config.userSettings.hyprland.performanceOptimizations;
 in
 {
-  options = {
-    userSettings.hyprland = {
-      enable = lib.mkEnableOption "Enable hyprland";
-      performanceOptimizations = lib.mkOption {
-        default = false;
-        type = lib.types.bool;
-        description = "Enable performance optimizations";
-      };
-    };
-  };
 
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland.settings = {
