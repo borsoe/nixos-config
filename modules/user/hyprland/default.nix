@@ -54,7 +54,7 @@ in
       CLUTTER_BACKEND = "wayland";
       #GDK_PIXBUF_MODULE_FILE = "${pkgs.librsvg}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache";
       #GSK_RENDERER = "gl";
-      # XCURSOR_THEME = config.gtk.cursorTheme.name;
+      XCURSOR_THEME = config.gtk.cursorTheme.name;
       GDK_DEBUG = "portals";
       GTK_USE_PORTALS = 1;
       GRIM_DEFAULT_DIR = config.xdg.userDirs.extraConfig.XDG_SCREENSHOT_DIR;
@@ -85,6 +85,12 @@ in
         [filechooser]
         cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
       '';
+    };
+
+    gtk.cursorTheme = {
+      package = pkgs.quintom-cursor-theme;
+      name = if (config.stylix.polarity == "light") then "Quintom_Ink" else "Quintom_Snow";
+      size = 36;
     };
 
     wayland.windowManager.hyprland = {
