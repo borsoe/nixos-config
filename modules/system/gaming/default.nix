@@ -95,7 +95,7 @@ in {
        "--prefer-vk-device 1002:1638" # lspci -nn | grep VGA
       ];
     };
-    chaotic.hdr.enable = true;
+    # chaotic.hdr.enable = true;
     systemSettings.bluetooth.enable = true;
     hardware.bluetooth = {
       enable = true;

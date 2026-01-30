@@ -30,8 +30,11 @@
         overlays = [
           # inputs.rust-overlay.overlays.default
           # inputs.emacs-overlay.overlays.default
-          inputs.chaotic.overlays.default
+          # inputs.chaotic.overlays.default
+          inputs.nix-cachyos-kernel.overlays.pinned
         ];
+        # Hardcode cachyos
+        boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
       };
 
       pkgs-stable = import inputs.nixpkgs-stable {
@@ -83,7 +86,7 @@
               }
 
               # chaos... control!
-              inputs.chaotic.nixosModules.default
+              # inputs.chaotic.nixosModules.default
             ];
             specialArgs = {
               inherit pkgs-stable;
@@ -97,7 +100,8 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "nixpkgs/nixos-25.11";
-    chaotic.url = "github:chaotic-cx/nyx";
+    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";

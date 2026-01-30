@@ -9,7 +9,7 @@
 
       # hardware
       cachy.enable = true;
-      cachy.variant = "lts";
+      cachy.variant = "lto";
       bluetooth.enable = true;
       tlp.enable = true;
       printing.enable = false;

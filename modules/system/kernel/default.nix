@@ -18,13 +18,14 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    boot.kernelPackages = lib.mkMerge [
-      (lib.mkIf (cfg.variant == null) pkgs.linuxPackages_cachyos)
-      (lib.mkIf (cfg.variant == "lts") pkgs.linuxPackages_cachyos-lts)
-      (lib.mkIf (cfg.variant == "lto") pkgs.linuxPackages_cachyos-lto)
-      (lib.mkIf (cfg.variant == "server") pkgs.linuxPackages_cachyos-server)
-      (lib.mkIf (cfg.variant == "hardened") pkgs.linuxPackages_cachyos-hardened)
-    ];
+    # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+    # boot.kernelPackages = lib.mkMerge [
+    #   (lib.mkIf (cfg.variant == null) pkgs.linuxPackages_cachyos)
+    #   (lib.mkIf (cfg.variant == "lts") pkgs.linuxPackages_cachyos-lts)
+    #   (lib.mkIf (cfg.variant == "lto") pkgs.linuxPackages_cachyos-lto)
+    #   (lib.mkIf (cfg.variant == "server") pkgs.linuxPackages_cachyos-server)
+    #   (lib.mkIf (cfg.variant == "hardened") pkgs.linuxPackages_cachyos-hardened)
+    # ];
     services.scx.enable = true;
     services.scx.package = pkgs.scx.rustscheds;
     services.scx.scheduler = "scx_lavd";
