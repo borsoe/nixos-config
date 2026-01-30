@@ -1,3 +1,0 @@
-#+title: Time to focus
-
-This is config for my work computer. Essentially the same as [[../snowfire][snowfire]], just minus the gaming (and a few other things).

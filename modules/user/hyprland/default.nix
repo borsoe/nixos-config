@@ -87,12 +87,6 @@ in
       '';
     };
 
-    gtk.cursorTheme = {
-      package = pkgs.quintom-cursor-theme;
-      name = if (config.stylix.polarity == "light") then "Quintom_Ink" else "Quintom_Snow";
-      size = 36;
-    };
-
     wayland.windowManager.hyprland = {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
@@ -137,12 +131,12 @@ in
         general = {
           layout = "scrolling";
           border_size = 2;
-          "col.active_border" =
-            if performance then
-              "0xff${config.lib.stylix.colors.base0B}"
-            else
-              "0xff${config.lib.stylix.colors.base08} 0xff${config.lib.stylix.colors.base09} 0xff${config.lib.stylix.colors.base0A} 0xff${config.lib.stylix.colors.base0B} 0xff${config.lib.stylix.colors.base0C} 0xff${config.lib.stylix.colors.base0D} 0xff${config.lib.stylix.colors.base0E} 0xff${config.lib.stylix.colors.base0F} 270deg";
-          "col.inactive_border" = "0xff${config.lib.stylix.colors.base02}";
+          # "col.active_border" =
+          #   if performance then
+          #     "0xff${config.lib.stylix.colors.base0B}"
+          #   else
+          #     "0xff${config.lib.stylix.colors.base08} 0xff${config.lib.stylix.colors.base09} 0xff${config.lib.stylix.colors.base0A} 0xff${config.lib.stylix.colors.base0B} 0xff${config.lib.stylix.colors.base0C} 0xff${config.lib.stylix.colors.base0D} 0xff${config.lib.stylix.colors.base0E} 0xff${config.lib.stylix.colors.base0F} 270deg";
+          # "col.inactive_border" = "0xff${config.lib.stylix.colors.base02}";
           resize_on_border = true;
           gaps_in = 14;
           gaps_out = 14;
@@ -156,13 +150,13 @@ in
         };
 
         group = {
-          "col.border_active" = config.wayland.windowManager.hyprland.settings.general."col.active_border";
-          "col.border_inactive" =
-            config.wayland.windowManager.hyprland.settings.general."col.inactive_border";
+          # "col.border_active" = config.wayland.windowManager.hyprland.settings.general."col.active_border";
+          # "col.border_inactive" =
+          #   config.wayland.windowManager.hyprland.settings.general."col.inactive_border";
           groupbar = {
             gradients = false;
-            "col.active" = "0xff${config.lib.stylix.colors.base0B}";
-            "col.inactive" = "0xff${config.lib.stylix.colors.base02}";
+            # "col.active" = "0xff${config.lib.stylix.colors.base0B}";
+            # "col.inactive" = "0xff${config.lib.stylix.colors.base02}";
           };
         };
 
@@ -271,11 +265,6 @@ in
         kitty
         killall
         polkit_gnome
-        # (ashell.overrideAttrs (o: {
-        #   patches = (o.patches or [ ]) ++ [
-        #     ./ashell.patch
-        #   ];
-        # }))
         libva-utils
         libinput-gestures
         gsettings-desktop-schemas
@@ -357,54 +346,6 @@ in
           fragColor = vec4(grayscale, pixColor.a);
       }
     '';
-    # home.file.".config/ashell/config.toml".text = ''
-    #   outputs = "All"
-    #   position = "Top"
-    #   app_launcher_cmd = "nwggrid-wrapper"
-    #   truncate_title_after_length = 150
-    #   [modules]
-    #   left = [ "AppLauncher", "SystemInfo" ]
-    #   center = [ "Workspaces" ]
-    #   right = [ "Clock", "Settings", "Tray" ]
-    #   [workspaces]
-    #   visibility_mode = "MonitorSpecific"
-    #   enable_workspace_filling = true
-    #   [system.cpu]
-    #   warn_threshold = 80
-    #   alert_threshold = 95
-    #   [system.mem]
-    #   warn_threshold = 50
-    #   alert_threshold = 75
-    #   [system.temp]
-    #   warn_threshold = 85
-    #   alert_threshold = 95
-    #   [clock]
-    #   format = "%a %d %b %H:%M:%S"
-    #   [mediaPlayer]
-    #   max_title_length = 100
-    #   [settings]
-    #   lockCmd = "hyprlock &"
-    #   audio_sinks_more_cmd = "pavucontrol -t 3"
-    #   audio_sources_more_cmd = "pavucontrol -t 4"
-    #   wifi_more_cmd = "nm-connection-editor"
-    #   vpn_more_cmd = "nm-connection-editor"
-    #   bluetooth_more_cmd = "blueman-manager"
-    #   [appearance]
-    #   scale_factor = 1.25
-    #   style = "Solid"
-    #   opacity = ${if performance then "1.0" else "0.7"}
-    #   background_color = "#${config.lib.stylix.colors.base00}88"
-    #   primary_color = "#${config.lib.stylix.colors.base0A}"
-    #   secondary_color = "#${config.lib.stylix.colors.base01}"
-    #   success_color = "#${config.lib.stylix.colors.base0A}"
-    #   danger_color = "#${config.lib.stylix.colors.base08}"
-    #   text_color = "#${config.lib.stylix.colors.base07}"
-    #   workspace_colors = [ "#${config.lib.stylix.colors.base0B}", "#${config.lib.stylix.colors.base0B}" ]
-    #   specialWorkspaceColors = [ "#${config.lib.stylix.colors.base0B}", "#${config.lib.stylix.colors.base0B}" ]
-    #   [appearance.menu]
-    #   opacity = ${if performance then "1.0" else "0.7"}
-    #   backdrop = 0.0
-    # '';
     services.hyprpolkitagent.enable = true;
     services.swayosd.enable = true;
     services.swayosd.topMargin = 0.5;
