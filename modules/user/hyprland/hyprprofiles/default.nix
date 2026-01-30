@@ -60,13 +60,13 @@ in
         icon = "qutebrowser";
       })
     ];
-    xdg.mimeApps.defaultApplications = lib.optionals qutebrowserDefault (lib.mkForce {
-      "text/html" = "qutebrowser-hyprprofile.desktop";
-      "x-scheme-handler/http" = "qutebrowser-hyprprofile.desktop";
-      "x-scheme-handler/https" = "qutebrowser-hyprprofile.desktop";
-      "x-scheme-handler/about" = "qutebrowser-hyprprofile.desktop";
-      "x-scheme-handler/unknown" = "qutebrowser-hyprprofile.desktop";
-    });
+    # xdg.mimeApps.defaultApplications = lib.optionals qutebrowserDefault (lib.mkForce {
+    #   "text/html" = "qutebrowser-hyprprofile.desktop";
+    #   "x-scheme-handler/http" = "qutebrowser-hyprprofile.desktop";
+    #   "x-scheme-handler/https" = "qutebrowser-hyprprofile.desktop";
+    #   "x-scheme-handler/about" = "qutebrowser-hyprprofile.desktop";
+    #   "x-scheme-handler/unknown" = "qutebrowser-hyprprofile.desktop";
+    # });
     home.file.".config/hyprprofiles/" = {
       source = ./profiles;
       recursive = true;

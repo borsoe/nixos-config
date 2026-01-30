@@ -21,7 +21,7 @@ in
       # Window rules
       windowrulev2 = [
         # Opacity
-        "opacity ${toString cfg.windowOpacity} override, fullscreen:0"
+        # "opacity ${toString cfg.windowOpacity} override, fullscreen:0"
 
         # Opaque windows (native transparency or forced opaque)
         "opaque, class:^(foot|equibop|org\.quickshell|imv|swappy)$"

@@ -118,10 +118,10 @@
     };
 
     rose-pine-hyprcursor = {
-          url = "github:ndom91/rose-pine-hyprcursor";
-          inputs.nixpkgs.follows = "nixpkgs";
-          inputs.hyprlang.follows = "hyprland/hyprlang";
-        };
+      url = "github:ndom91/rose-pine-hyprcursor";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+    };
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -130,9 +130,9 @@
     };
 
     stylix = {
-          url = "github:nix-community/stylix";
-          inputs.nixpkgs.follows = "nixpkgs";
-        };
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";

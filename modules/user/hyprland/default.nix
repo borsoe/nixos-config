@@ -258,7 +258,7 @@ in
       xwayland = {
         enable = true;
       };
-      systemd.enable = true;
+      systemd.enable = false;
     };
 
     home.packages = (
@@ -286,8 +286,8 @@ in
         wl-clipboard
         hyprland-protocols
         hyprpicker
-        inputs.hyprlock.packages.${pkgs.system}.default
-        hypridle
+        # inputs.hyprlock.packages.${pkgs.system}.default
+        # hypridle
         keepmenu
         pinentry-gnome3
         wev

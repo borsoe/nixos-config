@@ -25,10 +25,12 @@ in
       hyprland = {
         enable = true;
         package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+        withUWSM = true; # recommended for most users=
         xwayland = {
           enable = true;
         };
-        portalPackage  = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+        portalPackage =
+          inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       };
     };
 
@@ -38,12 +40,12 @@ in
       (sddm-astronaut.override {
         embeddedTheme = "Japanese aesthetic";
         # themeConfig = {
-          # TODO Update Theme Config
-          # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
-          # background = config.stylix.image;
-          # ScreenWidth = 1920;
-          # ScreenHeight = 1080;
-          # blur = false;
+        # TODO Update Theme Config
+        # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
+        # background = config.stylix.image;
+        # ScreenWidth = 1920;
+        # ScreenHeight = 1080;
+        # blur = false;
         # };
       })
       inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
@@ -60,12 +62,12 @@ in
         (sddm-astronaut.override {
           embeddedTheme = "Japanese aesthetic";
           # themeConfig = {
-            # TODO Update Theme Config
-            # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
-            # background = config.stylix.image;
-            # ScreenWidth = 1920;
-            # ScreenHeight = 1080;
-            # blur = false;
+          # TODO Update Theme Config
+          # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
+          # background = config.stylix.image;
+          # ScreenWidth = 1920;
+          # ScreenHeight = 1080;
+          # blur = false;
           # };
         })
       ];
