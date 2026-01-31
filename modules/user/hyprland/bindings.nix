@@ -102,8 +102,9 @@ in
         "Super+Shift, Comma, lockactivegroup, toggle"
 
         # Window actions - Focus (LEFT/RIGHT for horizontal within workspace)
-        "Super, left, movefocus, l"
-        "Super, right, movefocus, r"
+        # Commented out for hyprscroling
+        # "Super, left, movefocus, l"
+        # "Super, right, movefocus, r"
 
         # Window actions - Move windows (LEFT/RIGHT for horizontal within workspace)
         # Commented out for hyprscroling
