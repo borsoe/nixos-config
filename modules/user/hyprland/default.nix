@@ -148,12 +148,6 @@ in
           gaps_out = 14;
         };
 
-        plugin = {
-          hyprtasking = {
-            layout = "linear";
-            bg_color = "0xff${config.lib.stylix.colors.base02}";
-          };
-        };
 
         group = {
           # "col.border_active" = config.wayland.windowManager.hyprland.settings.general."col.active_border";

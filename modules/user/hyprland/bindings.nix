@@ -30,10 +30,6 @@ in
       "$cursorSize" = "24";
 
       # Caelestia Variables - Keybinds for Workspaces
-      "$kbMoveWinToWs" = "Super+Alt";
-      "$kbMoveWinToWsGroup" = "Ctrl+Super+Alt";
-      "$kbGoToWs" = "Super";
-      "$kbGoToWsGroup" = "Ctrl+Super";
       "$kbNextWs" = "Super, down"; # Changed to down for niri-like
       "$kbPrevWs" = "Super, up"; # Changed to up for niri-like
       "$kbToggleSpecialWs" = "Super, S";
@@ -49,8 +45,8 @@ in
       "$kbResizeWindow" = "Super, X";
       "$kbWindowPip" = "Super+Alt, Backslash";
       "$kbPinWindow" = "Super, P";
-      "$kbWindowFullscreen" = "Super, F";
-      "$kbWindowBorderedFullscreen" = "Super+Alt, F";
+      "$kbWindowFullscreen" = "Super+Alt, F";
+      "$kbWindowBorderedFullscreen" = "Super, F";
       "$kbToggleWindowFloating" = "Super+Alt, Space";
       "$kbCloseWindow" = "Super, Q";
 
@@ -76,18 +72,6 @@ in
       # Caelestia Shell Launcher bindings
       bindi = [
         "Super, Super_L, global, caelestia:launcher"
-      ];
-
-      bindin = [
-        # "Super, catchall, global, caelestia:launcherInterrupt"
-        "Super, mouse:272, global, caelestia:launcherInterrupt"
-        "Super, mouse:273, global, caelestia:launcherInterrupt"
-        "Super, mouse:274, global, caelestia:launcherInterrupt"
-        "Super, mouse:275, global, caelestia:launcherInterrupt"
-        "Super, mouse:276, global, caelestia:launcherInterrupt"
-        "Super, mouse:277, global, caelestia:launcherInterrupt"
-        "Super, mouse_up, global, caelestia:launcherInterrupt"
-        "Super, mouse_down, global, caelestia:launcherInterrupt"
       ];
 
       # Regular bindings
@@ -281,6 +265,19 @@ in
         "$kbMoveWindow, movewindow"
         "Super, mouse:273, resizewindow"
         "$kbResizeWindow, resizewindow"
+      ];
+
+
+      bindin = [
+        "Super, mouse:272, global, caelestia:launcherInterrupt"
+        "Super, mouse:273, global, caelestia:launcherInterrupt"
+        "Super, mouse:274, global, caelestia:launcherInterrupt"
+        "Super, mouse:275, global, caelestia:launcherInterrupt"
+        "Super, mouse:276, global, caelestia:launcherInterrupt"
+        "Super, mouse:277, global, caelestia:launcherInterrupt"
+        "Super, mouse_up, global, caelestia:launcherInterrupt"
+        "Super, mouse_down, global, caelestia:launcherInterrupt"
+        "Super, catchall, global, caelestia:launcherInterrupt"
       ];
     };
   };
