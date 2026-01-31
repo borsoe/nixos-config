@@ -126,8 +126,8 @@ in
         "Super, right, layoutmsg, move +col"
         "Super+Shift, left, layoutmsg, swapcol l"
         "Super+Shift, right, layoutmsg, swapcol r"
-        "Super+Shift, down, layoutmsg, movewindowto d"
-        "Super+Shift, up, layoutmsg, movewindowto u"
+        # "Super+Shift, down, layoutmsg, movewindowto d"
+        # "Super+Shift, up, layoutmsg, movewindowto u"
 
         # Utilities - Screenshots
         "Super+Shift, S, global, caelestia:screenshotFreeze"
@@ -166,9 +166,8 @@ in
         # "Super+Ctrl, up, movetoworkspace, e-1"
 
         # Move window with follow
-        # Commented out for hyprscroling
-        # "Super+Shift, down, movetoworkspace, e+1"
-        # "Super+Shift, up, movetoworkspace, e-1"
+        "Super+Shift, down, movetoworkspace, e+1"
+        "Super+Shift, up, movetoworkspace, e-1"
 
         # Special workspace
         "Ctrl+Super+Shift, up, movetoworkspace, special:special"
