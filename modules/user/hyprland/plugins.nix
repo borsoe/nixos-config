@@ -22,12 +22,14 @@ in
         layout = "grid";
         bg_color = "0xff${config.lib.stylix.colors.base02}";
         grid =  {
-                    rows = 1
-                    loop = false
-                    gaps_use_aspect_ratio = false
+                    rows = 1;
+                    loop = false;
+                    gaps_use_aspect_ratio = false;
                 };
       };
       hyprscrolling = {
          fullscreen_on_one_column = true;
-      }
+      };
     };
+  };
+}

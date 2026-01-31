@@ -54,7 +54,6 @@ in
       "$kbSystemMonitor" = "Ctrl+Shift, Escape";
       "$kbMusic" = "Super, M";
       "$kbCommunication" = "Super, D";
-      "$kbTodo" = "Super, R";
 
       # Caelestia Variables - Keybinds for Apps
       "$kbTerminal" = "Super, T";
@@ -71,7 +70,7 @@ in
 
       # Caelestia Shell Launcher bindings
       bindi = [
-        "Super, Super_L, global, caelestia:launcher"
+        "Super, R, global, caelestia:launcher"
       ];
 
       # Regular bindings
