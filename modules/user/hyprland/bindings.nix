@@ -66,11 +66,6 @@ in
       "$kbLock" = "Super, L";
       "$kbRestoreLock" = "Super+Alt, L";
 
-      # Caelestia Shell Launcher bindings
-      bindr = [
-        "Super, Super_L, global, caelestia:launcher"
-      ];
-
       # Regular bindings
       bind = [
         # Caelestia Shell - Misc
@@ -237,7 +232,9 @@ in
       bindr = [
         "Ctrl+Super+Shift, R, exec, qs -c caelestia kill"
         "Ctrl+Super+Alt, R, exec, qs -c caelestia kill; caelestia shell -d"
+        "Super, Super_L, global, caelestia:launcher" # Caelestia Shell Launcher bindings
       ];
+
 
       # Repeated bindings (hold to repeat)
       binde = [
