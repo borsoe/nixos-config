@@ -84,7 +84,7 @@ in
         "$kbSystemMonitor, exec, caelestia toggle sysmon"
         "$kbMusic, exec, caelestia toggle music"
         "$kbCommunication, exec, caelestia toggle communication"
-        "$kbTodo, exec, caelestia toggle todo"
+        # "$kbTodo, exec, caelestia toggle todo"
         "$kbToggleSpecialWs, exec, caelestia toggle specialws"
 
         # Hyprtasking
@@ -276,7 +276,7 @@ in
         "Super, mouse:277, global, caelestia:launcherInterrupt"
         "Super, mouse_up, global, caelestia:launcherInterrupt"
         "Super, mouse_down, global, caelestia:launcherInterrupt"
-        "Super, catchall, global, caelestia:launcherInterrupt"
+        # "Super, catchall, global, caelestia:launcherInterrupt"
       ];
     };
   };
