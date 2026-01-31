@@ -79,7 +79,7 @@ in
       ];
 
       bindin = [
-        "Super, catchall, global, caelestia:launcherInterrupt"
+        # "Super, catchall, global, caelestia:launcherInterrupt"
         "Super, mouse:272, global, caelestia:launcherInterrupt"
         "Super, mouse:273, global, caelestia:launcherInterrupt"
         "Super, mouse:274, global, caelestia:launcherInterrupt"

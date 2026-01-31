@@ -99,10 +99,10 @@ in
       ];
 
       # Workspace rules
-      workspace = [
-        "w[tv1]s[false], gapsout:$singleWindowGapsOut"
-        "f[1]s[false], gapsout:$singleWindowGapsOut"
-      ];
+      # workspace = [
+      #   "w[tv1]s[false], gapsout:$singleWindowGapsOut"
+      #   "f[1]s[false], gapsout:$singleWindowGapsOut"
+      # ];
 
       # Layer rules
       layerrule = [
