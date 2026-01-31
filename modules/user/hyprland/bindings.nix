@@ -106,8 +106,9 @@ in
         "Super, right, movefocus, r"
 
         # Window actions - Move windows (LEFT/RIGHT for horizontal within workspace)
-        "Super+Shift, left, movewindow, l"
-        "Super+Shift, right, movewindow, r"
+        # Commented out for hyprscroling
+        # "Super+Shift, left, movewindow, l"
+        # "Super+Shift, right, movewindow, r"
 
         # Window actions - Other
         "Ctrl+Super, Backslash, centerwindow, 1"
@@ -120,9 +121,12 @@ in
         "$kbCloseWindow, killactive"
 
         # layoutmsgs for hyprscroling
-        # "$kbWindowBorderedFullscreen, layoutmsg, togglefit"
         "Super, left, layoutmsg, move -col"
         "Super, right, layoutmsg, move +col"
+        "Super+Shift, left, layoutmsg, movewindowto l"
+        "Super+Shift, right, layoutmsg, movewindowto r"
+        "Super+Shift, down, layoutmsg, movewindowto d"
+        "Super+Shift, up, layoutmsg, movewindowto u"
 
         # Utilities - Screenshots
         "Super+Shift, S, global, caelestia:screenshotFreeze"
@@ -157,12 +161,14 @@ in
         "Super, mouse_up, workspace, e-1"
 
         # Move window to workspace - UP/DOWN (niri-like)
-        "Super+Ctrl, down, movetoworkspace, e+1"
-        "Super+Ctrl, up, movetoworkspace, e-1"
+        # Commented out for hyprscroling
+        # "Super+Ctrl, down, movetoworkspace, e+1"
+        # "Super+Ctrl, up, movetoworkspace, e-1"
 
         # Move window with follow
-        "Super+Shift, down, movetoworkspace, e+1"
-        "Super+Shift, up, movetoworkspace, e-1"
+        # Commented out for hyprscroling
+        # "Super+Shift, down, movetoworkspace, e+1"
+        # "Super+Shift, up, movetoworkspace, e-1"
 
         # Special workspace
         "Ctrl+Super+Shift, up, movetoworkspace, special:special"
