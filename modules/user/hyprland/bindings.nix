@@ -102,8 +102,9 @@ in
         "Super+Shift, Comma, lockactivegroup, toggle"
 
         # Window actions - Focus (LEFT/RIGHT for horizontal within workspace)
-        "Super, left, movefocus, l"
-        "Super, right, movefocus, r"
+        # Commented out for hyprscroling
+        # "Super, left, movefocus, l"
+        # "Super, right, movefocus, r"
 
         # Window actions - Move windows (LEFT/RIGHT for horizontal within workspace)
         # Commented out for hyprscroling
@@ -123,8 +124,8 @@ in
         # layoutmsgs for hyprscroling
         "Super, left, layoutmsg, move -col"
         "Super, right, layoutmsg, move +col"
-        "Super+Shift, left, layoutmsg, movewindowto l"
-        "Super+Shift, right, layoutmsg, movewindowto r"
+        "Super+Shift, left, layoutmsg, swapcol l"
+        "Super+Shift, right, layoutmsg, swapcol r"
         "Super+Shift, down, layoutmsg, movewindowto d"
         "Super+Shift, up, layoutmsg, movewindowto u"
 
@@ -142,13 +143,12 @@ in
         "Super, Period, exec, pkill fuzzel || caelestia emoji -p"
 
         # Workspace navigation - UP/DOWN for vertical scrolling (niri-like)
-        # Note: Using workspace e+1/e-1 for relative navigation
-        "Super, down, workspace, e+1"
-        "Super, up, workspace, e-1"
+        "Super, down, workspace, r+1"
+        "Super, up, workspace, r-1"
 
         # Move window to workspace
-        "Super+Alt, up, movetoworkspace, e-1"
-        "Super+Alt, down, movetoworkspace, e+1"
+        "Super+Alt, up, movetoworkspace, r-1"
+        "Super+Alt, down, movetoworkspace, r+1"
 
         # Window group cycling
         "$kbWindowGroupCycleNext, cyclenext"
@@ -157,8 +157,8 @@ in
         "Ctrl+Shift+Alt, Tab, changegroupactive, b"
 
         # Alternative workspace navigation with mouse
-        "Super, mouse_down, workspace, e+1"
-        "Super, mouse_up, workspace, e-1"
+        "Super, mouse_down, workspace, r+1"
+        "Super, mouse_up, workspace, r-1"
 
         # Move window to workspace - UP/DOWN (niri-like)
         # Commented out for hyprscroling
