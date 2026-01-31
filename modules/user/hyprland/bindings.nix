@@ -67,8 +67,8 @@ in
       "$kbRestoreLock" = "Super+Alt, L";
 
       # Caelestia Shell Launcher bindings
-      bindi = [
-        "Super, R, global, caelestia:launcher"
+      bindr = [
+        "Super, Super_L, global, caelestia:launcher"
       ];
 
       # Regular bindings
@@ -260,8 +260,8 @@ in
         "$kbResizeWindow, resizewindow"
       ];
 
-
       bindin = [
+        # "Super, catchall, global, caelestia:launcherInterrupt"
         "Super, mouse:272, global, caelestia:launcherInterrupt"
         "Super, mouse:273, global, caelestia:launcherInterrupt"
         "Super, mouse:274, global, caelestia:launcherInterrupt"
@@ -270,7 +270,6 @@ in
         "Super, mouse:277, global, caelestia:launcherInterrupt"
         "Super, mouse_up, global, caelestia:launcherInterrupt"
         "Super, mouse_down, global, caelestia:launcherInterrupt"
-        # "Super, catchall, global, caelestia:launcherInterrupt"
       ];
     };
   };
