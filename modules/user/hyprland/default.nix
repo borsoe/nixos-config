@@ -98,7 +98,7 @@ in
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       plugins = [
         inputs.hyprland-plugins.packages.${pkgs.system}.hyprscrolling
-        inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
+        # inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
       ];
       settings = {
         env = [
@@ -218,7 +218,7 @@ in
             "border, 1, 10, default"
             "borderangle, 1, 100, linear, loop"
             "fade, 1, 10, default"
-            "workspaces, 1, 5, wind"
+            "workspaces, 1, 5, wind, slidevert"
             "windows, 1, 6, wind, slide"
             "specialWorkspace, 1, 6, default, slidefadevert -50%"
           ];

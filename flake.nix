@@ -116,10 +116,10 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    hyprtasking = {
-      url = "github:raybbian/hyprtasking";
-      inputs.hyprland.follows = "hyprland";
-    };
+    # hyprtasking = {
+    #   url = "github:raybbian/hyprtasking";
+    #   inputs.hyprland.follows = "hyprland";
+    # };
 
     rose-pine-hyprcursor = {
       url = "github:ndom91/rose-pine-hyprcursor";

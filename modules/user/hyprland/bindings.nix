@@ -86,10 +86,10 @@ in
         "$kbToggleSpecialWs, exec, caelestia toggle specialws"
 
         # Hyprtasking
-        "SUPER, tab, hyprtasking:toggle, all"
-        "SUPER+Alt, tab, hyprtasking:toggle, cursor"
-        ", escape, hyprtasking:if_active, hyprtasking:toggle cursor"
-        "SUPER, X, hyprtasking:killhovered"
+        # "SUPER, tab, hyprtasking:toggle, all"
+        # "SUPER+Alt, tab, hyprtasking:toggle, cursor"
+        # ", escape, hyprtasking:if_active, hyprtasking:toggle cursor"
+        # "SUPER, X, hyprtasking:killhovered"
 
         # Apps
         "$kbTerminal, exec, $terminal"
