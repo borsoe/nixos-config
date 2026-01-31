@@ -119,6 +119,11 @@ in
         "$kbToggleWindowFloating, togglefloating"
         "$kbCloseWindow, killactive"
 
+        # layoutmsgs for hyprscroling
+        # "$kbWindowBorderedFullscreen, layoutmsg, togglefit"
+        "Super, left, layoutmsg, move -col"
+        "Super, right, layoutmsg, move +col"
+
         # Utilities - Screenshots
         "Super+Shift, S, global, caelestia:screenshotFreeze"
         "Super+Shift+Alt, S, global, caelestia:screenshot"
@@ -232,7 +237,7 @@ in
       bindr = [
         "Ctrl+Super+Shift, R, exec, qs -c caelestia kill"
         "Ctrl+Super+Alt, R, exec, qs -c caelestia kill; caelestia shell -d"
-        "Super, Super_L, global, caelestia:launcher" # Caelestia Shell Launcher bindings
+        "Super, R, global, caelestia:launcher" # Caelestia Shell Launcher bindings
       ];
 
 
