@@ -30,8 +30,6 @@ in
       "$cursorSize" = "24";
 
       # Caelestia Variables - Keybinds for Workspaces
-      "$kbNextWs" = "Super, down"; # Changed to down for niri-like
-      "$kbPrevWs" = "Super, up"; # Changed to up for niri-like
       "$kbToggleSpecialWs" = "Super, S";
 
       # Caelestia Variables - Keybinds for Window Groups
@@ -144,6 +142,16 @@ in
         "Super, down, workspace, e+1"
         "Super, up, workspace, e-1"
 
+        # Move window to workspace
+        "Super+Alt, up, movetoworkspace, e-1"
+        "Super+Alt, down, movetoworkspace, e+1"
+
+        # Window group cycling
+        "$kbWindowGroupCycleNext, cyclenext"
+        "$kbWindowGroupCyclePrev, cyclenext, prev"
+        "Ctrl+Alt, Tab, changegroupactive, f"
+        "Ctrl+Shift+Alt, Tab, changegroupactive, b"
+
         # Alternative workspace navigation with mouse
         "Super, mouse_down, workspace, e+1"
         "Super, mouse_up, workspace, e-1"
@@ -236,20 +244,6 @@ in
         # Window resizing
         "Super, Minus, splitratio, -0.1"
         "Super, Equal, splitratio, 0.1"
-
-        # Workspace navigation (repeated for smooth scrolling)
-        "$kbPrevWs, workspace, e-1"
-        "$kbNextWs, workspace, e+1"
-
-        # Move window to workspace (repeated)
-        "Super+Alt, up, movetoworkspace, e-1"
-        "Super+Alt, down, movetoworkspace, e+1"
-
-        # Window group cycling
-        "$kbWindowGroupCycleNext, cyclenext"
-        "$kbWindowGroupCyclePrev, cyclenext, prev"
-        "Ctrl+Alt, Tab, changegroupactive, f"
-        "Ctrl+Shift+Alt, Tab, changegroupactive, b"
       ];
 
       # Volume with repeat and lock
