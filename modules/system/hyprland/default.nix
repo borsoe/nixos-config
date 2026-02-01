@@ -8,6 +8,17 @@
 
 let
   cfg = config.systemSettings.hyprland;
+  custom-sddm-astronaut = pkgs.sddm-astronaut.override {
+      embeddedTheme = "japanese_aesthetic";
+      # themeConfig = {
+      # TODO Update Theme Config
+      # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
+      # background = config.stylix.image;
+      # ScreenWidth = 1920;
+      # ScreenHeight = 1080;
+      # blur = false;
+      # };
+    };
 in
 {
   options = {
@@ -37,17 +48,7 @@ in
     # Necessary packages
     environment.systemPackages = with pkgs; [
       jq
-      (sddm-astronaut.override {
-        embeddedTheme = "Japanese aesthetic";
-        # themeConfig = {
-        # TODO Update Theme Config
-        # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
-        # background = config.stylix.image;
-        # ScreenWidth = 1920;
-        # ScreenHeight = 1080;
-        # blur = false;
-        # };
-      })
+      custom-sddm-astronaut
       inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
 
@@ -59,17 +60,7 @@ in
       theme = "sddm-astronaut-theme";
       package = pkgs.kdePackages.sddm;
       extraPackages = with pkgs; [
-        (sddm-astronaut.override {
-          embeddedTheme = "Japanese aesthetic";
-          # themeConfig = {
-          # TODO Update Theme Config
-          # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/Themes/astronaut.conf
-          # background = config.stylix.image;
-          # ScreenWidth = 1920;
-          # ScreenHeight = 1080;
-          # blur = false;
-          # };
-        })
+        custom-sddm-astronaut
       ];
     };
 
