@@ -17,6 +17,7 @@
       # software
       flatpak.enable = true;
       gaming.enable = true;
+      socials.enable = true;
       virtualization = {
         docker.enable = true;
         virtualMachines.enable = false;

@@ -5,7 +5,7 @@ let
 in {
 
   options = {
-    systemSettings.gaming = {
+    systemSettings.socials = {
       enable = lib.mkEnableOption "Enable telegram and discord";
     };
   };
