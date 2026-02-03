@@ -27,7 +27,6 @@
       keepass.enable = false;
       media.enable = true;
       music.enable = false;
-      office.enable = true;
       recording.enable = false;
       virtualization = {
         virtualMachines.enable = false;

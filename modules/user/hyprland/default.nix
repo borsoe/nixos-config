@@ -122,9 +122,7 @@ in
           "hyprprofile Default"
           "ydotoold"
           "GOMAXPROCS=1 syncthing --no-browser"
-          "blueman-applet"
-          "gnome-keyring-daemon --start --components=secrets"
-          "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+          "systemctl --user enable --now hyprpolkitagent.service"
           "wl-paste --type text --watch cliphist store"
           "wl-paste --type image --watch cliphist store"
           "trash-empty 30"
@@ -259,12 +257,10 @@ in
       with pkgs;
       [
         qpwgraph
-        networkmanagerapplet
-        hyprland-monitor-attached
         alacritty
         kitty
         killall
-        polkit_gnome
+        hyprpolkitagent
         libva-utils
         libinput-gestures
         gsettings-desktop-schemas

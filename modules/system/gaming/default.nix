@@ -60,6 +60,7 @@ in {
           #!/bin/sh
           steam -shutdown
         '')
+        lutris
       ];
     programs.gamemode.enable = true;
     programs.gamescope.enable = true;

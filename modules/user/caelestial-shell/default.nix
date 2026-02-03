@@ -28,6 +28,11 @@ in
       };
 
       settings = {
+        appearance.transparency.enable = true;
+        background.visualiser = {
+          blur = true;
+          enable = true;
+        }
         bar.status = {
           showBattery = false;
         };
