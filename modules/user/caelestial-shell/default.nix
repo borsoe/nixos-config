@@ -32,7 +32,7 @@ in
         background.visualiser = {
           blur = true;
           enable = true;
-        }
+        };
         bar.status = {
           showBattery = false;
         };
