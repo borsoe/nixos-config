@@ -38,7 +38,10 @@ in
         };
         general.apps.terminal = "kitty";
         paths.wallpaperDir = "~/Images";
-        services.weatherLocation = "Tehran";
+        services = {
+          weatherLocation = "Tehran";
+          useFahrenheit = false;
+        }
       };
 
       cli = {

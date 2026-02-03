@@ -214,7 +214,7 @@ in
             "windowsOut, 1, 5, winOut, popin"
             "windowsMove, 1, 5, wind, slide"
             "border, 1, 10, default"
-            "borderangle, 1, 100, linear, loop"
+            # "borderangle, 1, 100, linear, loop"
             "fade, 1, 10, default"
             "workspaces, 1, 5, wind, slidevert"
             "windows, 1, 6, wind, slide"
