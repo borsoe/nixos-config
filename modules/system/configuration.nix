@@ -81,9 +81,9 @@
     # Networking
     networking.networkmanager = {
         enable = true;
-        plugins = with pkgs; [
-          networkmanager-openvpn
-        ];
+        # plugins = with pkgs; [
+        #   networkmanager-openvpn
+        # ];
       };
 
     # Remove bloat
@@ -94,14 +94,17 @@
     programs.localsend.openFirewall = true;
 
     # vpn
-    # services.openvpn.servers = {
-    #   WS-Strop = {
-    #     config = ''
-    #       config /etc/OpenVpn/Windscribe-Amsterdam-Stroopwafel.conf
-    #       auth-user-pass /etc/OpenVpn/secret.text
-    #     '';
-    #     autoStart = false;
-    #   };
-    # };
+    services.openvpn.servers = {
+      WS-Strop = {
+        # config = ''
+        #   config /etc/OpenVpn/Windscribe-Amsterdam-Stroopwafel.conf
+        #   auth-user-pass /etc/OpenVpn/secret.text
+        # '';
+        config = '' config /etc/openvpn-confs/Windscribe-Amsterdam-Stroopwafel.conf'';
+        # authUserPass = '' auth-user-pass /etc/openvpn-confs/secret.text'';
+        autoStart = false;
+        updateResolvConf = true;
+      };
+    };
   };
 }
