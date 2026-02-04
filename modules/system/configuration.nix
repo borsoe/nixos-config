@@ -79,7 +79,12 @@
     boot.plymouth.enable = true;
 
     # Networking
-    networking.networkmanager.enable = true; # Use networkmanager
+    networking.networkmanager = {
+        enable = true;
+        plugins = with pkgs; [
+          networkmanager-openvpn
+        ];
+      };
 
     # Remove bloat
     programs.nano.enable = lib.mkForce false;
@@ -89,15 +94,14 @@
     programs.localsend.openFirewall = true;
 
     # vpn
-    services.openvpn.servers = {
-      WS-Strop = {
-        config = ''
-          config /etc/OpenVpn/Windscribe-Amsterdam-Stroopwafel.conf
-          auth-user-pass /etc/Documents/OpenVpn/secret.text
-        '';
-        autoStart = false;
-      };
-    };
+    # services.openvpn.servers = {
+    #   WS-Strop = {
+    #     config = ''
+    #       config /etc/OpenVpn/Windscribe-Amsterdam-Stroopwafel.conf
+    #       auth-user-pass /etc/OpenVpn/secret.text
+    #     '';
+    #     autoStart = false;
+    #   };
+    # };
   };
-
 }

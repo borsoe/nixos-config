@@ -141,7 +141,7 @@ in {
         "*/1 * * * * steamgrab"
       ];
     };
-    networking.firewall.allowedTCPPorts = [ 24872 ];
-    networking.firewall.allowedUDPPorts = [ 24872 ];
+    # networking.firewall.allowedTCPPorts = [ 24872 ];
+    # networking.firewall.allowedUDPPorts = [ 24872 ];
   };
 }
