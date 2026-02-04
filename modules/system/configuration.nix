@@ -87,6 +87,17 @@
     # Localsend is helpful for setting up new systems or quickly transferring files
     programs.localsend.enable = true;
     programs.localsend.openFirewall = true;
+
+    # vpn
+    services.openvpn.servers = {
+      WS-Strop = {
+        config = ''
+          config /etc/OpenVpn/Windscribe-Amsterdam-Stroopwafel.conf
+          auth-user-pass /etc/Documents/OpenVpn/secret.text
+        '';
+        autoStart = false;
+      };
+    };
   };
 
 }

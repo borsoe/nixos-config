@@ -41,7 +41,7 @@ in
         services = {
           weatherLocation = "Tehran";
           useFahrenheit = false;
-        }
+        };
       };
 
       cli = {
